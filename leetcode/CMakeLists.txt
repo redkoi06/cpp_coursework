@@ -1,0 +1,6 @@
+add_executable(lc2235 lc2235.cpp)
+add_executable(lc412 lc412.cpp)
+add_executable(lc1480 lc1480.cpp)
+add_executable(lc1929 lc1929.cpp)
+add_executable(lc26 lc26.cpp)
+add_executable(lc27 lc27.cpp)
