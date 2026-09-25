@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <stack>
 
 std::string reverseWords(const std::string& s)
 {
