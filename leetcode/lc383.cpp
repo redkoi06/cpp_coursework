@@ -3,11 +3,25 @@
 //
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 bool canConstruct(const std::string& ransomNote, const std::string& magazine)
 {
     // TODO: 核心算法
-    return false;
+    std::unordered_map<char, int> mp;
+    for (auto c : magazine)
+    {
+        mp[c]++;
+    }
+    for (auto c : ransomNote)
+    {
+        if (mp.find(c) == mp.end() || mp[c] == 0)
+        {
+            return false;
+        }
+        mp[c]--;
+    }
+    return true;
 }
 
 int main()
