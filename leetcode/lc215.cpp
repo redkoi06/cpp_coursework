@@ -3,11 +3,19 @@
 //
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int findKthLargest(std::vector<int>& nums, int k)
 {
     // TODO: 核心算法
-    return 0;
+    std::make_heap(nums.begin(),nums.end());
+    for (int i = 0; i < k - 1; i++)
+    {
+        std::pop_heap(nums.begin(),nums.end());
+        nums.pop_back();
+    }
+    std::pop_heap(nums.begin(),nums.end());
+    return nums.back();
 }
 
 int main()
