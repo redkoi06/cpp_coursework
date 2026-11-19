@@ -8,3 +8,5 @@ add_executable(cpp main.cpp)
 add_subdirectory(lab1)
 
 add_subdirectory(leetcode)
+
+add_subdirectory(HW1)
